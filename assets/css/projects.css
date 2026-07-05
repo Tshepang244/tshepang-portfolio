@@ -1,0 +1,38 @@
+/* ==========================================================================
+   SKILLS.CSS
+   Skill cards grid with icons and hover animation
+   ========================================================================== */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-sm);
+}
+
+.skill-card {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-md);
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: transform var(--transition-fast), border-color var(--transition-fast),
+                background var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.skill-card i {
+    font-size: 1.4rem;
+    color: var(--accent-light);
+    flex-shrink: 0;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-light);
+    background: var(--bg-card-hover);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
